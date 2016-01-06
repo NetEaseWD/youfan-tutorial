@@ -4,10 +4,10 @@
 
 下面介绍 APS 的基本用法。
 
-
 #### 第一步，在接口管理平台（以下简称 NEI）上创建一个项目
 
 1. 打开 [NEI](http://nei.hz.netease.com/)，使用 corp 邮箱登录。
+
 2. 创建项目，根据需求创建页面、异步接口、数据类型等资源，具体用法请查看 [NEI 帮助](http://nei.hz.netease.com/manual/)。
 
 
@@ -31,13 +31,13 @@ NEI 构建工具基于 [Node.js](http://nodejs.org/) 平台，请先安装 Node.
 
 3. 下面以 windows 电脑为例，生成 `NEI 后台管理系统` 项目。默认生成的项目会放在执行 `nei build` 命令时所在的根目录。假如希望将生成的模板代码放在 `D:\workspace\neibms` 目录中，先在命令提示符中进到 D 盘根目录，然后运行下面的命令：
 
-```bash
-cd workspace\neibms
-```
+  ```bash
+  cd workspace\neibms
+  ```
 
-```bash
-nei build 11112
-```
+  ```bash
+  nei build 11112
+  ```
 
 其中，11112 是 `NEI 后台管理系统` 项目的 id。
 
