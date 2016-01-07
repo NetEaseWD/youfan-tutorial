@@ -20,7 +20,13 @@ NEI 构建工具基于 [Node.js](http://nodejs.org/) 平台，请先安装 Node.
 1. 运行下面的命令安装构建工具：
 
     ```bash
-    npm install nei –g
+    npm install –g nei
+    ```
+
+    如果已安装过构建工具，则可以运行下面的命令将构建工具更新至最新版本：
+
+    ```bash
+    npm update –g nei
     ```
 
 2. 运行下面的命令，创建项目的模板代码。pid 为第一步创建的项目的 id。其他命令及参数配置请查看构建工具的说明文档：[NEI 构建工具](https://github.com/genify/nei)。
@@ -39,24 +45,68 @@ NEI 构建工具基于 [Node.js](http://nodejs.org/) 平台，请先安装 Node.
   nei build 11112
   ```
 
-其中，11112 是 `NEI 后台管理系统` 项目的 id。
+其中，11112 是 [`NEI 后台管理系统`](http://nei.hz.netease.com/main#/m/project/page/?pid=11112) 项目的 id。
 
-如果运行上面的命令时没有错误发生，最后会提示 `build success`，说明工程已经创建成功。打开 `D:\workspace\neibms`  目录，可以看到项目的结构和一些模板代码及配置文件已经自动生成。
+如果运行上面的命令时没有错误发生，最后会提示 `build success`，说明工程已经创建成功。打开 `D:\workspace\neibms`  目录，可以看到项目的结构和一些模板代码及配置文件已经自动生成：
 
-下面以前端工程师的视角，介绍本地模拟容器 [Puer](https://github.com/leeluolee/puer) 的基本用法。
+  ```bash
+├── deploy
+├── nei.11112
+└── src
+    └── main
+        └── webapp
+            ├── WEB-INF
+            │   └── views
+            │       └── common
+            ├── res
+            └── src
+                ├── css
+                ├── javascript
+                │   ├── lib
+                │   └── widget
+                └── mcss
+  ```
 
-#### 第三步，使用 Puer 进行本地开发
+下面以前端工程师的视角，介绍本地模拟容器 [Puer](https://github.com/leeluolee/puer) 的基本用法，不过首先需要安装前端依赖的资源文件。
+
+#### 第三步，使用 Bower 安装前端依赖资源
+首先，进到目录 `src\main\webapp\` 中，该目录中有一个 `bower.json` 文件，里面已经事先定义好了一些依赖，我们需要使用 Bower 工具来安装这些依赖。
+
+1. 运行下面的命令安装 Bower
+
+  ```bash
+  npm install –g bower
+  ```
+
+2. 然后运行下面的命令安装依赖：
+
+  ```bash
+  bower install
+  ```
+
+3. 由于 bower 只负责下载依赖，并不会解析 Node.js 项目中的依赖，所以需要进到目录 `/src/main/webapp/src/javascript/lib/express-freemarker` 中运行下面的命令：
+
+  ```bash
+  npm install
+  ```
+
+>注意，上面的步骤需要具体项目具体操作，本文演示的都是默认情况，nei 构建工具默认生成的是 Java 工程，默认 的模板引擎是 freemarker。此外，运行该模板引擎还需要安装 [`JDK`](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)，请根据实际情况自行安装。
+
+
+#### 第四步，使用 Puer 进行本地开发
 
 1. 运行下面的命令安装 Puer：
 
   ```bash
-  npm install puer –g
+  npm install –g "leeluolee/puer#next"
   ```
 
 2. 进到 `D:\workspace\neibms` 目录，运行下面的命令：
 
   ```bash
-  puer
+  puer -c nei.11112\puer.js
   ```
 
-此时，puer 将当前目录作为静态服务器，并会在浏览器中打开 [http://localhost:8000/](http://localhost:8000/)。
+此时，puer 会将当前目录作为静态服务器，并会在浏览器中打开 [http://localhost:8002/](http://localhost:8002/)。
+
+接下来，就可以进行开发了。比如，在 nei 中定义了页面 `首页`，它的访问路径是 `/index`，则它的访问地址便是：[http://localhost:8002/index](http://localhost:8002/index)。
