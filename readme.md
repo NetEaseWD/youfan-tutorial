@@ -90,7 +90,7 @@ NEI 构建工具基于 [Node.js](http://nodejs.org/) 平台，请先安装 Node.
   npm install
   ```
 
->注意，上面的步骤需要根据具体的项目进行具体的操作，本文演示的都是默认情况，nei 构建工具默认生成的是 Java 工程，默认 的模板引擎是 freemarker。此外，运行该模板引擎需要安装 [`JDK`](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)，请根据实际情况自行安装。
+>注意，上面的步骤需要根据具体的项目进行具体的操作，本文演示的都是默认情况，nei 构建工具默认生成的是 Java 工程，默认 的模板引擎是 freemarker。此外，运行该模板引擎需要安装 [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)，请根据实际情况自行安装。
 
 
 #### 第四步，使用 Puer 进行本地开发
@@ -107,8 +107,10 @@ NEI 构建工具基于 [Node.js](http://nodejs.org/) 平台，请先安装 Node.
   puer -c nei.11112\puer.js
   ```
 
-此时，puer 会将当前目录作为静态服务器，并会在浏览器中打开 [http://localhost:8002/](http://localhost:8002/)。
+此时，puer 会在浏览器中打开 [http://localhost:8002/](http://localhost:8002/)。
 
-接下来，就可以进行开发了。比如，在 NEI 中定义了页面 `首页`，它的访问路径是 `/index`，则它的访问地址便是：[http://localhost:8002/index](http://localhost:8002/index)。
+假如在 NEI 中定义了页面 `首页`，它的访问路径是 `/index`，则它的访问地址便是：[http://localhost:8002/index](http://localhost:8002/index)。
+
+异步接口的访问地址和上述规则一样，并且 Puer 会根据 NEI 中定义的规则返回相应的 mock 数据。
 
 Good luck!
