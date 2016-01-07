@@ -2,7 +2,7 @@
 
 自动化量产系统（Automated Production System，以下简称 APS）是前端技术部推出的一套高效地开发产品的解决方案。针对产品开发的每个环节，APS 都有相应的工具做一些规范化以及自动化的工作，大大地提升了工作效率和降低了沟通成本。
 
-本文介绍 APS 的基本用法。
+下面介绍 APS 的基本用法。
 
 #### 第一步，在接口管理平台（以下简称 NEI）上创建一个项目
 
@@ -15,7 +15,7 @@
 
 NEI 构建工具基于 [Node.js](http://nodejs.org/) 平台，请先安装 Node.js 环境。
 
->注意，Node.js 版本须为 `v4.2` 及以上。
+>注意，Node.js 的版本须为 `v4.2` 及以上。
 
 1. 运行下面的命令安装构建工具：
 
@@ -84,13 +84,13 @@ NEI 构建工具基于 [Node.js](http://nodejs.org/) 平台，请先安装 Node.
   bower install
   ```
 
-3. 由于 bower 只负责下载在 `bower.json` 文件中定义的依赖，并不会解析 Node.js 项目中的依赖，所以需要进到目录 `/src/main/webapp/src/javascript/lib/express-freemarker` 中运行下面的命令：
+3. 由于 Bower 只负责下载在 `bower.json` 文件中定义的依赖，并不会解析 Node.js 项目中的依赖，所以需要进到目录 `/src/main/webapp/src/javascript/lib/express-freemarker` 中运行下面的命令：
 
   ```bash
   npm install
   ```
 
->注意，上面的步骤需要根据具体的项目进行具体的操作，本文演示的都是默认情况，nei 构建工具默认生成的是 Java 工程，默认 的模板引擎是 freemarker。此外，运行该模板引擎需要安装 [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)，请根据实际情况自行安装。
+>注意，上面的步骤需要根据具体的项目进行具体的操作，本文演示的都是默认情况，NEI 构建工具默认生成的是 Java 工程，默认 的模板引擎是 freemarker。此外，运行该模板引擎需要安装 [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)，请根据实际情况自行安装。
 
 
 #### 第四步，使用 Puer 进行本地开发
@@ -107,10 +107,10 @@ NEI 构建工具基于 [Node.js](http://nodejs.org/) 平台，请先安装 Node.
   puer -c nei.11112\puer.js
   ```
 
-此时，puer 会在浏览器中打开 [http://localhost:8002/](http://localhost:8002/)。
+此时，Puer 会在浏览器中打开 [http://localhost:8002/](http://localhost:8002/)。
 
-假如在 NEI 中定义了页面 `首页`，它的访问路径是 `/index`，则它的访问地址便是：[http://localhost:8002/index](http://localhost:8002/index)。
+假如在 NEI 中定义了页面 `首页`，它的访问路径是 `/index`，则它的访问地址是：[http://localhost:8002/index](http://localhost:8002/index)。
 
-异步接口的访问地址和上述规则一样，并且 Puer 会根据 NEI 中定义的规则返回相应的 mock 数据。
+异步接口的访问地址和上述规则一样，并且 Puer 会根据 NEI 中定义的规则返回相应的 MOCK 数据。
 
 Good luck!
