@@ -35,7 +35,7 @@ NEI 构建工具基于 [Node.js](http://nodejs.org/) 平台，请先安装 Node.
 	nei build [pid]
 	```    
 
-3. 下面以 windows 电脑为例，生成 `NEI 后台管理系统` 项目。默认生成的项目会放在执行 `nei build` 命令时所在的根目录。假如希望将生成的工程文件放在事先创建好的 `D:\workspace\neibms` 目录中，先在命令提示符中进到 D 盘根目录，然后运行下面的命令：
+3. 下面以 Windows 电脑为例，生成 `NEI 后台管理系统` 项目。默认生成的项目会放在执行 `nei build` 命令时所在的根目录。假如希望将生成的工程文件放在事先创建好的 `D:\workspace\neibms` 目录中，先在命令提示符中进到 D 盘根目录，然后运行下面的命令：
 
   ```bash
   cd workspace\neibms
@@ -112,5 +112,3 @@ NEI 构建工具基于 [Node.js](http://nodejs.org/) 平台，请先安装 Node.
 假如在 NEI 中定义了页面 `首页`，它的访问路径是 `/index`，则它的访问地址是：[http://localhost:8002/index](http://localhost:8002/index)。
 
 异步接口的访问地址和上述规则一样，并且 Puer 会根据 NEI 中定义的规则返回相应的 MOCK 数据。
-
-Good luck!
