@@ -45,6 +45,10 @@ nei build 11112
 
 下面以前端工程师的视角，介绍本地模拟容器 [Puer](https://github.com/leeluolee/puer) 的基本用法。
 
-#### 第三步，安装 Puer
+#### 第三步，使用 Puer
 
-1. 
+1. 执行下面的命令安装 Puer
+
+    ```bash
+    npm install puer –g
+    ```
