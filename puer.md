@@ -2,13 +2,13 @@
 
 [Puer](https://github.com/leeluolee/puer) 是一个本地模拟容器。在使用 [NEI 构建工具](https://github.com/genify/nei)生成项目的时候，会自动生成 Puer 的配置文件。
 
-Puer 的基本使用方法，在 [APS 使用教程](readme.md) 中已经有过介绍，在此不再赘述。如果想深入了解，请查看它的[官方文档](https://github.com/leeluolee/puer)。
+Puer 的基本使用方法，在 [网易有范使用教程](readme.md) 中已经有过介绍，在此不再赘述。如果想深入了解，请查看它的[官方文档](https://github.com/leeluolee/puer)。
 
 在前端开发的时候，除了异步接口调用之外，还有很多的 form 表单提交。form 表单提交一般会有多种状态，譬如 `成功`、`失败`等，不同的状态会有不同的提示信息。
 
 下面介绍一下如何使用 Puer 来模拟普通的 form 表单提交。
 
-请先按照 [APS 使用教程](readme.md) 中的操作步骤创建项目，项目 id 为 `11133`。
+请先按照 [网易有范使用教程](readme.md) 中的操作步骤创建项目，项目 id 为 `11133`。
 
 使用编辑器打开文件 `/src/main/webapp/WEB-INF/views/index.ftl`，添加下面的内容：
 
